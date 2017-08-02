@@ -3,4 +3,24 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="pembeone">#f8bbd0</color>
+    <color name="pembetwo">#f48fb1</color>
+    <color name="pembethree">#f06292</color>
+    <color name="pembefour">#ec407a</color>
+    <color name="pembefive">#ad1457</color>
+    <color name="pembesix">#c2185b</color>
+    <color name="pembeseven">#ff80ab</color>
+    <color name="pembeeight">#f50057</color>
+    <color name="acikmor">#ea80fc</color>
+    <color name="mor">#d500f9</color>
+    <color name="yesil">#259b24</color>
+    <color name="sarı">#ffff00</color>
+    <color name="kırmızı">#e51c23</color>
+    <color name="petrol">#03e9f4</color>
+    <color name="turuncu">#ff5722</color>
+    <color name="gri">#607d8b</color>
+    <color name="açıkmavi">#4fc3f7</color>
+    <color name="açıkmavi1">#0288d1</color>
+    <color name="beyaz">#fafafa</color>
+
 </resources>

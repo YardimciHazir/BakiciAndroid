@@ -1,41 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.merveyanar.ilkprojeyardimcim.MainActivity">
+    android:background="@color/pembeseven">
 
-    <LinearLayout
-        android:layout_centerVertical="true"
-        android:orientation="vertical"
+
+<ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-
-        <EditText
-            android:textColor="#ffff"
-            android:textColorHint="#ffff"
-            android:hint="Kullanıcı Adı Giriniz"
-            android:id="@+id/userName"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:inputType="textPassword"
-            android:textColor="#ffff"
-            android:textColorHint="#ffff"
-            android:hint="Şifre Giriniz"
-            android:id="@+id/userPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/vhitelogo" />
 
-        <Button
-            android:text="Giriş Yap"
-            android:id="@+id/loginBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/editTextUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Kullanıcı Adınız"
+                android:inputType="textEmailAddress" />
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/editTextUserPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Şifreniz"
+                android:inputType="textPassword" />
 
+            <Button
+                android:textAllCaps="false"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/buttonLogin"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/pembefive"
+                android:textColor="#FFFFFF"
+                android:layout_height="wrap_content"
+                android:text="Giriş" />
+
+            <TextView
+                android:id="@+id/txtRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/beyaz"
+                android:text="Kayıt Ol!" />
+
+        </LinearLayout>
+
+    </ScrollView>
 </RelativeLayout>
