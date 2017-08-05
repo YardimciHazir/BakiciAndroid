@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/pembeseven"
     tools:context="com.merveyanar.ilkprojeyardimcim.GirisSecimActivity">
     <ScrollView
         android:layout_width="match_parent"
@@ -24,25 +25,25 @@
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
-            android:id="@+id/buttonKullanici"
+            android:id="@+id/buttonAile"
             android:layout_width="match_parent"
             android:layout_gravity="center"
             android:background="@color/pembefive"
             android:textColor="#FFFFFF"
             android:layout_height="wrap_content"
-            android:text="Kullanıcı Girişi" />
+            android:text="Aile Girişi" />
         <Button
             android:textAllCaps="false"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
-            android:id="@+id/buttonBakici"
+            android:id="@+id/buttonGonullu"
             android:layout_width="match_parent"
             android:layout_gravity="center"
             android:background="@color/pembefive"
             android:textColor="#FFFFFF"
             android:layout_height="wrap_content"
-            android:text="Bakıcı Girişi" />
+            android:text="Gönüllü Girişi" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

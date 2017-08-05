@@ -1,10 +1,10 @@
 package com.merveyanar.ilkprojeyardimcim;
 
 import android.content.DialogInterface;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
@@ -18,11 +18,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-/**
- * Created by 7 on 01.08.2017.
- */
-
-public class ProfileActivity extends AppCompatActivity {
+public class ProfileGonulluActivity extends AppCompatActivity {
     private TextView userNameTxt;
     private Button changeEmailBttn;
     private Button changePasswordBttn;
@@ -52,7 +48,7 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_profile_gonullu);
 
         auth = FirebaseAuth.getInstance();
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser(); // get current user
@@ -72,7 +68,7 @@ public class ProfileActivity extends AppCompatActivity {
         changePasswordBttn = (Button)findViewById(R.id.changePasswordBttn);
         signOutBttn = (Button)findViewById(R.id.signOutBttn);
 
-        userNameTxt.setText("Aile Email:" + " " + auth.getCurrentUser().getEmail());
+        userNameTxt.setText("Gönüllü Email:" + " " + auth.getCurrentUser().getEmail());
 
         signOutBttn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,9 +92,7 @@ public class ProfileActivity extends AppCompatActivity {
                 changeEmailOrPasswordFunc(str,false);
             }
         });
-
     }
-
     private void signOutFunc() {
 
         auth.signOut();
@@ -107,8 +101,8 @@ public class ProfileActivity extends AppCompatActivity {
     private void changeEmailOrPasswordFunc(String title, final boolean option) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(
-                ProfileActivity.this);
-        final EditText edit = new EditText(ProfileActivity.this);
+                ProfileGonulluActivity.this);
+        final EditText edit = new EditText(ProfileGonulluActivity.this);
         builder.setPositiveButton(getString(R.string.change_txt), null);
         builder.setNegativeButton(getString(R.string.close_txt), null);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
@@ -161,11 +155,11 @@ public class ProfileActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(ProfileActivity.this, "Şifre değiştirildi.", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(ProfileGonulluActivity.this, "Şifre değiştirildi.", Toast.LENGTH_LONG).show();
                                     signOutFunc();
                                 } else {
                                     edit.setText("");
-                                    Toast.makeText(ProfileActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                    Toast.makeText(ProfileGonulluActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                                 }
                             }
                         });
@@ -178,12 +172,12 @@ public class ProfileActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(Task<Void> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(ProfileActivity.this, "E-posta değiştirildi.", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(ProfileGonulluActivity.this, "E-posta değiştirildi.", Toast.LENGTH_LONG).show();
                                     signOutFunc();
 
                                 } else {
                                     edit.setText("");
-                                    Toast.makeText(ProfileActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                    Toast.makeText(ProfileGonulluActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                                 }
                             }
                         });
