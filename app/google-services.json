@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "848608292503",
+    "firebase_url": "https://bakiciandroid.firebaseio.com",
+    "project_id": "bakiciandroid",
+    "storage_bucket": "bakiciandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848608292503:android:76d0e043e2ef152b",
+        "android_client_info": {
+          "package_name": "com.merveyanar.ilkprojeyardimcim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848608292503-r59cee49heu1endjmar9puhc7s6e9jsr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.merveyanar.ilkprojeyardimcim",
+            "certificate_hash": "6c46e03d2cb6a06f9407ad68ee66145f29b5e1ba"
+          }
+        },
+        {
+          "client_id": "848608292503-al479eni1vd7dg2hqlbojblqhl40r5ra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFUcACM6vWmLN5pxQ5Y9RIDcfJ9FCdzfE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848608292503-al479eni1vd7dg2hqlbojblqhl40r5ra.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
