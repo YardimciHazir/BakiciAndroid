@@ -45,7 +45,7 @@ public class MainBakiciActivity extends AppCompatActivity {
 
         if(firebaseUser != null){ // check user session
 
-            Intent i = new Intent(MainBakiciActivity.this,ProfileGonulluActivity.class);
+            Intent i = new Intent(MainBakiciActivity.this,ProfileBakiciActivity.class);
             startActivity(i);
             finish();
         }
