@@ -27,10 +27,10 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".MainGonulluActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".ProfileGonulluActivity"></activity>
+        <activity android:name=".ProfileGonulluActivity" />
+        <activity android:name=".MainBakiciActivity" />
+        <activity android:name=".ProfileBakiciActivity" />
+        <activity android:name=".RegisterBakiciActivity"></activity>
     </application>
 
 </manifest>

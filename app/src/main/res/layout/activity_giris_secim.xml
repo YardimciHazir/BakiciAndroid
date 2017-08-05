@@ -37,13 +37,13 @@
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
-            android:id="@+id/buttonGonullu"
+            android:id="@+id/buttonBakici"
             android:layout_width="match_parent"
             android:layout_gravity="center"
             android:background="@color/pembefive"
             android:textColor="#FFFFFF"
             android:layout_height="wrap_content"
-            android:text="Gönüllü Girişi" />
+            android:text="Bakıcı Girişi" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

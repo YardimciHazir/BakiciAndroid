@@ -7,13 +7,13 @@ import android.view.View;
 import android.widget.Button;
 
 public class GirisSecimActivity extends AppCompatActivity {
-    private Button buttonAile,buttonGonullu;
+    private Button buttonAile,buttonBakici;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_giris_secim);
 
-        buttonGonullu=(Button)findViewById(R.id.buttonGonullu);
+        buttonBakici=(Button)findViewById(R.id.buttonBakici);
         buttonAile=(Button)findViewById(R.id.buttonAile);
 
         buttonAile.setOnClickListener(new View.OnClickListener() {
@@ -27,10 +27,10 @@ public class GirisSecimActivity extends AppCompatActivity {
 
             }
         });
-        buttonGonullu.setOnClickListener(new View.OnClickListener() {
+        buttonBakici.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getBaseContext(), MainGonulluActivity.class);//Bakıcı Giriş işlemlerine götürür.
+                Intent i = new Intent(getBaseContext(), MainBakiciActivity.class);//Bakıcı Giriş işlemlerine götürür.
 
                 startActivity(i);
 
