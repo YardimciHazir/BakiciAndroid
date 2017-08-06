@@ -51,13 +51,16 @@
                 android:layout_height="wrap_content"
                 android:text="Aile Girişi Yap" />
 
-            <TextView
-                android:id="@+id/txtRegisterAile"
+            <Button
+                android:id="@+id/buttonRegisterAile"
+                android:textAllCaps="false"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:textAlignment="center"
-                android:textColor="@color/beyaz"
+                android:textColor="@color/colorAccent"
                 android:text="Kayıt Ol!" />
 
         </LinearLayout>
