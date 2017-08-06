@@ -43,7 +43,7 @@
                 android:textAllCaps="false"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:id="@+id/buttonLogin"
+                android:id="@+id/buttonLoginBakici"
                 android:layout_width="match_parent"
                 android:layout_gravity="center"
                 android:background="@color/pembefive"
@@ -51,13 +51,16 @@
                 android:layout_height="wrap_content"
                 android:text="Bakıcı Girişi Yap" />
 
-            <TextView
-                android:id="@+id/txtRegister"
+            <Button
+                android:textAllCaps="false"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/buttonRegisterBakici"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:textAlignment="center"
-                android:textColor="@color/beyaz"
+                android:textColor="@color/colorAccent"
                 android:text="Kayıt Ol!" />
 
         </LinearLayout>

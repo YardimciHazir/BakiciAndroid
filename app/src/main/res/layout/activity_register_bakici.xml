@@ -11,9 +11,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <EditText
+            android:id="@+id/bakiciFirstName"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Ad" />
 
         <EditText
-            android:id="@+id/registerUserName"
+            android:id="@+id/bakiciLastName"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Soyad" />
+
+        <EditText
+            android:id="@+id/dateofBirth"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Doğum Tarihi" />
+
+        <EditText
+            android:id="@+id/email"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
@@ -22,21 +45,30 @@
 
         <EditText
             android:inputType="textPassword"
-            android:id="@+id/registerPassword"
+            android:id="@+id/password"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             android:hint="Şifre" />
 
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/passwordconfirm"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="20dp"
+            android:hint="Şifre Tekrar" />
+
         <Button
-            android:id="@+id/buttonRegister"
+            android:id="@+id/buttonRegisterB"
             android:background="@color/colorAccent"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_margin="15dp"
             android:layout_marginBottom="20dp"
             android:textColor="#ffffff"
-            android:text="Kayıt Ol"/>
+            android:text="İlerle"/>
 
 
     </LinearLayout>

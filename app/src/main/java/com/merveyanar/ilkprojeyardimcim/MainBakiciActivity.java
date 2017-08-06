@@ -23,8 +23,9 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainBakiciActivity extends AppCompatActivity {
     private EditText editTextUserName;
     private EditText editTextUserPassword;
-    private Button buttonLogin;
-    private TextView txtRegister;
+    private Button buttonLoginBakici;
+    private Button buttonRegisterBakici;
+    private TextView txtRegisterBakici;
     private FirebaseAuth mAuth;
     private FirebaseUser firebaseUser;
     private String userName;
@@ -37,8 +38,8 @@ public class MainBakiciActivity extends AppCompatActivity {
 
         editTextUserName = (EditText)findViewById(R.id.editTextUserName);
         editTextUserPassword = (EditText)findViewById(R.id.editTextUserPassword);
-        buttonLogin = (Button) findViewById(R.id.buttonLogin);
-        txtRegister = (TextView) findViewById(R.id.txtRegister);
+        buttonLoginBakici = (Button) findViewById(R.id.buttonLoginBakici);
+        buttonRegisterBakici = (Button) findViewById(R.id.buttonRegisterBakici);
 
         mAuth = FirebaseAuth.getInstance();
         firebaseUser = mAuth.getCurrentUser(); // authenticated user
@@ -50,7 +51,7 @@ public class MainBakiciActivity extends AppCompatActivity {
             finish();
         }
 
-        buttonLogin.setOnClickListener(new View.OnClickListener() {
+        buttonLoginBakici.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -67,11 +68,12 @@ public class MainBakiciActivity extends AppCompatActivity {
             }
         });
 
-        txtRegister.setOnClickListener(new View.OnClickListener() {
+        buttonRegisterBakici.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainBakiciActivity.this,RegisterActivity.class);
+                Intent intent = new Intent(MainBakiciActivity.this,RegisterBakiciActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

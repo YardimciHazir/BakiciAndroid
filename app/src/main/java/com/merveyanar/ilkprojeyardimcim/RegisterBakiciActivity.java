@@ -1,6 +1,8 @@
 package com.merveyanar.ilkprojeyardimcim;
 
 import android.content.Intent;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,63 +16,56 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterBakiciActivity extends AppCompatActivity {
-    private EditText registerUserName;
-    private EditText registerPassword;
-    private Button buttonRegister;
+    private EditText bakiciFirstName,bakiciLastName,dateofBirth,email,password,passwordconfirm;
+    private Button buttonRegisterB;
     private FirebaseAuth mAuth;
-    private String userName;
-    private String userPassword;
+    private String userFirstName;
+    private String userLastName;
+    private String userdateofbirth;
+    private String useremail;
+    private String userpassword;
+    private String userpasswordconfirm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_bakici);
 
-        registerUserName = (EditText)findViewById(R.id.registerUserName);
-        registerPassword = (EditText)findViewById(R.id.registerPassword);
-        buttonRegister = (Button) findViewById(R.id.buttonRegister);
+        bakiciFirstName = (EditText)findViewById(R.id.bakiciFirstName);
+        bakiciLastName = (EditText)findViewById(R.id.bakiciLastName);
+        dateofBirth = (EditText)findViewById(R.id.dateofBirth);
+        email = (EditText)findViewById(R.id.email);
+        password = (EditText)findViewById(R.id.password);
+        passwordconfirm = (EditText)findViewById(R.id.passwordconfirm);
+        buttonRegisterB = (Button)findViewById(R.id.buttonRegisterB);
 
         mAuth = FirebaseAuth.getInstance();
 
         // register buton tiklaninca
-        buttonRegister.setOnClickListener(new View.OnClickListener() {
+        buttonRegisterB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                userName = registerUserName.getText().toString();
-                userPassword = registerPassword.getText().toString();
-                if(userName.isEmpty() || userPassword.isEmpty()){
+                Fragment fragment = null;
+                userFirstName = bakiciFirstName.getText().toString();
+                userLastName = bakiciLastName.getText().toString();
+                userdateofbirth = dateofBirth.getText().toString();
+                useremail = email.getText().toString();
+                userpassword = password.getText().toString();
+                userpasswordconfirm = passwordconfirm.getText().toString();
+
+                if(userFirstName.isEmpty() || userLastName.isEmpty() || userdateofbirth.isEmpty() || useremail.isEmpty() || userpassword.isEmpty() || userpasswordconfirm.isEmpty()){
 
                     Toast.makeText(getApplicationContext(),"Lütfen gerekli alanları doldurunuz!",Toast.LENGTH_SHORT).show();
 
                 }else{
-
-                    registerFunc();
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    fragmentManager.beginTransaction().replace(R.id.fragment, fragment).commit();
                 }
 
             }
         });
     }
 
-
-    private void registerFunc() {
-
-        mAuth.createUserWithEmailAndPassword(userName,userPassword)
-                .addOnCompleteListener(RegisterBakiciActivity.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Intent i = new Intent(RegisterBakiciActivity.this,ProfileActivity.class);
-                            startActivity(i);
-                            finish();
-                        }
-                        else{
-                            Toast.makeText(getApplicationContext(),task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
-                });
-
-    }
 }
 
 
