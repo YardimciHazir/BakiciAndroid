@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "848608292503-dpdtg4gv9v27fhmrjgl7dj1sqc8h0fi6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.merveyanar.ilkprojeyardimcim",
+            "certificate_hash": "0effcc3099e37fd5603379057faf496ba05fec92"
+          }
+        },
+        {
           "client_id": "848608292503-r59cee49heu1endjmar9puhc7s6e9jsr.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

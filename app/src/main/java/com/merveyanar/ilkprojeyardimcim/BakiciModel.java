@@ -2,25 +2,11 @@ package com.merveyanar.ilkprojeyardimcim;
 
 import java.util.Date;
 
-public class BakiciModel {
+/**
+ * Created by 7 on 05.08.2017.
+ */
 
-    String ad;
-    String soyad;
-    Date dogumTarihi;
-    String adres;
-    String email;
-    String sifre;
-    String uyruk;
-    String medeniDurum;
-    String kanGrubu;
-    String egitimDurumu;
-    String fotograf;
-    String sertifika;
-    String deneyimBilgileri;
-    String cinsiyet;
-    String bakimTercihi;
-    String ilSecim;
-    String ilceSecim;
+public class BakiciModel {
 
     public String getAd() {
         return ad;
@@ -38,11 +24,11 @@ public class BakiciModel {
         this.soyad = soyad;
     }
 
-    public Date getDogumTarihi() {
+    public String getDogumTarihi() {
         return dogumTarihi;
     }
 
-    public void setDogumTarihi(Date dogumTarihi) {
+    public void setDogumTarihi(String dogumTarihi) {
         this.dogumTarihi = dogumTarihi;
     }
 
@@ -158,8 +144,8 @@ public class BakiciModel {
         this.ilceSecim = ilceSecim;
     }
 
-
-    public BakiciModel(String ad, String soyad, Date dogumTarihi, String adres, String email, String sifre, String uyruk, String medeniDurum, String kanGrubu, String egitimDurumu, String fotograf, String sertifika, String deneyimBilgileri, String cinsiyet, String bakimTercihi, String ilSecim, String ilceSecim) {
+    public BakiciModel(int id, String ad, String soyad, Date dogumTarihi, String adres, String email, String sifre, String uyruk, String medeniDurum, String kanGrubu, String egitimDurumu, String fotograf, String sertifika, String deneyimBilgileri, String cinsiyet, String bakimTercihi, String ilSecim, String ilceSecim) {
+        this.id = id;
         this.ad = ad;
         this.soyad = soyad;
         this.dogumTarihi = dogumTarihi;
@@ -179,6 +165,7 @@ public class BakiciModel {
         this.ilceSecim = ilceSecim;
     }
 
+    public BakiciModel(){
 
-
+    }
 }

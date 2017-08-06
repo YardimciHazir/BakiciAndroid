@@ -29,7 +29,8 @@
             android:screenOrientation="portrait" />
         <activity android:name=".MainBakiciActivity" />
         <activity android:name=".ProfileBakiciActivity" />
-        <activity android:name=".RegisterBakiciActivity"></activity>
+        <activity android:name=".RegisterBakiciActivity" />
+        <activity android:name=".RegisterBakiciActivity2"></activity>
     </application>
 
 </manifest>
