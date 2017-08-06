@@ -2,19 +2,25 @@ package com.merveyanar.ilkprojeyardimcim;
 
 import java.util.Date;
 
-/**
- * Created by 7 on 05.08.2017.
- */
-
 public class BakiciModel {
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    String ad;
+    String soyad;
+    Date dogumTarihi;
+    String adres;
+    String email;
+    String sifre;
+    String uyruk;
+    String medeniDurum;
+    String kanGrubu;
+    String egitimDurumu;
+    String fotograf;
+    String sertifika;
+    String deneyimBilgileri;
+    String cinsiyet;
+    String bakimTercihi;
+    String ilSecim;
+    String ilceSecim;
 
     public String getAd() {
         return ad;
@@ -152,26 +158,6 @@ public class BakiciModel {
         this.ilceSecim = ilceSecim;
     }
 
-    public BakiciModel(int id, String ad, String soyad, Date dogumTarihi, String adres, String email, String sifre, String uyruk, String medeniDurum, String kanGrubu, String egitimDurumu, String fotograf, String sertifika, String deneyimBilgileri, String cinsiyet, String bakimTercihi, String ilSecim, String ilceSecim) {
-        this.id = id;
-        this.ad = ad;
-        this.soyad = soyad;
-        this.dogumTarihi = dogumTarihi;
-        this.adres = adres;
-        this.email = email;
-        this.sifre = sifre;
-        this.uyruk = uyruk;
-        this.medeniDurum = medeniDurum;
-        this.kanGrubu = kanGrubu;
-        this.egitimDurumu = egitimDurumu;
-        this.fotograf = fotograf;
-        this.sertifika = sertifika;
-        this.deneyimBilgileri = deneyimBilgileri;
-        this.cinsiyet = cinsiyet;
-        this.bakimTercihi = bakimTercihi;
-        this.ilSecim = ilSecim;
-        this.ilceSecim = ilceSecim;
-    }
 
     public BakiciModel(String ad, String soyad, Date dogumTarihi, String adres, String email, String sifre, String uyruk, String medeniDurum, String kanGrubu, String egitimDurumu, String fotograf, String sertifika, String deneyimBilgileri, String cinsiyet, String bakimTercihi, String ilSecim, String ilceSecim) {
         this.ad = ad;
@@ -193,22 +179,6 @@ public class BakiciModel {
         this.ilceSecim = ilceSecim;
     }
 
-    int id;
-    String ad;
-    String soyad;
-    Date dogumTarihi;
-    String adres;
-    String email;
-    String sifre;
-    String uyruk;
-    String medeniDurum;
-    String kanGrubu;
-    String egitimDurumu;
-    String fotograf;
-    String sertifika;
-    String deneyimBilgileri;
-    String cinsiyet;
-    String bakimTercihi;
-    String ilSecim;
-    String ilceSecim;
+
+
 }

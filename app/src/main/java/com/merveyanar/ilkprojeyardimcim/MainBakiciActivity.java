@@ -25,7 +25,6 @@ public class MainBakiciActivity extends AppCompatActivity {
     private EditText editTextUserPassword;
     private Button buttonLoginBakici;
     private Button buttonRegisterBakici;
-    private TextView txtRegisterBakici;
     private FirebaseAuth mAuth;
     private FirebaseUser firebaseUser;
     private String userName;
@@ -46,7 +45,7 @@ public class MainBakiciActivity extends AppCompatActivity {
 
         if(firebaseUser != null){ // check user session
 
-            Intent i = new Intent(MainBakiciActivity.this,ProfileBakiciActivity.class);
+            Intent i = new Intent(MainBakiciActivity.this,NavigationBakiciProfileActivity.class);
             startActivity(i);
             finish();
         }
@@ -86,7 +85,7 @@ public class MainBakiciActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
 
-                            Intent i = new Intent(MainBakiciActivity.this,ProfileBakiciActivity.class);
+                            Intent i = new Intent(MainBakiciActivity.this,NavigationBakiciProfileActivity.class);
                             startActivity(i);
                             finish();
 
