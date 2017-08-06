@@ -1,20 +1,12 @@
 package com.merveyanar.ilkprojeyardimcim;
 
-import java.util.Date;
+import android.widget.EditText;
 
 /**
  * Created by 7 on 05.08.2017.
  */
 
 public class BakiciModel {
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getAd() {
         return ad;
@@ -32,11 +24,11 @@ public class BakiciModel {
         this.soyad = soyad;
     }
 
-    public Date getDogumTarihi() {
+    public String getDogumTarihi() {
         return dogumTarihi;
     }
 
-    public void setDogumTarihi(Date dogumTarihi) {
+    public void setDogumTarihi(String dogumTarihi) {
         this.dogumTarihi = dogumTarihi;
     }
 
@@ -152,54 +144,22 @@ public class BakiciModel {
         this.ilceSecim = ilceSecim;
     }
 
-    public BakiciModel(int id, String ad, String soyad, Date dogumTarihi, String adres, String email, String sifre, String uyruk, String medeniDurum, String kanGrubu, String egitimDurumu, String fotograf, String sertifika, String deneyimBilgileri, String cinsiyet, String bakimTercihi, String ilSecim, String ilceSecim) {
-        this.id = id;
-        this.ad = ad;
-        this.soyad = soyad;
-        this.dogumTarihi = dogumTarihi;
-        this.adres = adres;
-        this.email = email;
-        this.sifre = sifre;
-        this.uyruk = uyruk;
-        this.medeniDurum = medeniDurum;
-        this.kanGrubu = kanGrubu;
-        this.egitimDurumu = egitimDurumu;
-        this.fotograf = fotograf;
-        this.sertifika = sertifika;
-        this.deneyimBilgileri = deneyimBilgileri;
-        this.cinsiyet = cinsiyet;
-        this.bakimTercihi = bakimTercihi;
-        this.ilSecim = ilSecim;
-        this.ilceSecim = ilceSecim;
-    }
-
-    public BakiciModel(String ad, String soyad, Date dogumTarihi, String adres, String email, String sifre, String uyruk, String medeniDurum, String kanGrubu, String egitimDurumu, String fotograf, String sertifika, String deneyimBilgileri, String cinsiyet, String bakimTercihi, String ilSecim, String ilceSecim) {
-        this.ad = ad;
-        this.soyad = soyad;
-        this.dogumTarihi = dogumTarihi;
-        this.adres = adres;
-        this.email = email;
-        this.sifre = sifre;
-        this.uyruk = uyruk;
-        this.medeniDurum = medeniDurum;
-        this.kanGrubu = kanGrubu;
-        this.egitimDurumu = egitimDurumu;
-        this.fotograf = fotograf;
-        this.sertifika = sertifika;
-        this.deneyimBilgileri = deneyimBilgileri;
-        this.cinsiyet = cinsiyet;
-        this.bakimTercihi = bakimTercihi;
-        this.ilSecim = ilSecim;
-        this.ilceSecim = ilceSecim;
-    }
-
-    int id;
     String ad;
     String soyad;
-    Date dogumTarihi;
+    String dogumTarihi;
     String adres;
     String email;
     String sifre;
+
+    public String getSifreTekrar() {
+        return sifreTekrar;
+    }
+
+    public void setSifreTekrar(String sifreTekrar) {
+        this.sifreTekrar = sifreTekrar;
+    }
+
+    String sifreTekrar;
     String uyruk;
     String medeniDurum;
     String kanGrubu;
@@ -211,4 +171,29 @@ public class BakiciModel {
     String bakimTercihi;
     String ilSecim;
     String ilceSecim;
+
+    public BakiciModel(String ad, String soyad, String dogumTarihi, String adres, String email, String sifre, String sifreTekrar,String uyruk, String medeniDurum, String kanGrubu, String egitimDurumu, String fotograf, String sertifika, String deneyimBilgileri, String cinsiyet, String bakimTercihi, String ilSecim, String ilceSecim) {
+        this.ad = ad;
+        this.soyad = soyad;
+        this.dogumTarihi = dogumTarihi;
+        this.adres = adres;
+        this.email = email;
+        this.sifre = sifre;
+        this.sifreTekrar = sifreTekrar;
+        this.uyruk = uyruk;
+        this.medeniDurum = medeniDurum;
+        this.kanGrubu = kanGrubu;
+        this.egitimDurumu = egitimDurumu;
+        this.fotograf = fotograf;
+        this.sertifika = sertifika;
+        this.deneyimBilgileri = deneyimBilgileri;
+        this.cinsiyet = cinsiyet;
+        this.bakimTercihi = bakimTercihi;
+        this.ilSecim = ilSecim;
+        this.ilceSecim = ilceSecim;
+    }
+
+    public BakiciModel(){
+
+    }
 }
