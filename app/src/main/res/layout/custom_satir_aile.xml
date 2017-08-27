@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
+
+        <TextView
             android:id="@+id/aileFirstName"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
@@ -17,7 +18,7 @@
             android:layout_marginBottom="20dp"
             android:hint="Hasta Yakını Ad" />
 
-        <EditText
+        <TextView
             android:id="@+id/aileLastName"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
@@ -26,7 +27,7 @@
             android:hint="Hasta Yakını Soyad" />
 
 
-        <EditText
+        <TextView
             android:id="@+id/aileEmail"
             android:inputType="textEmailAddress"
             android:layout_height="wrap_content"
@@ -34,9 +35,6 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             android:hint="Email" />
-
-
-
 
     </LinearLayout>
 

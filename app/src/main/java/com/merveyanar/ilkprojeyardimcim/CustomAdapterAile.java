@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -42,9 +43,9 @@ public class CustomAdapterAile extends BaseAdapter {
 
         View satir = layoutInflater.inflate(R.layout.custom_satir_aile,null);
 
-        EditText aileAd= (EditText) satir.findViewById(R.id.aileFirstName);
-        EditText aileSoyad= (EditText) satir.findViewById(R.id.aileLastName);
-        EditText aileMail= (EditText) satir.findViewById(R.id.aileEmail);
+        TextView aileAd= (TextView) satir.findViewById(R.id.aileFirstName);
+        TextView aileSoyad= (TextView) satir.findViewById(R.id.aileLastName);
+        TextView aileMail= (TextView) satir.findViewById(R.id.aileEmail);
 
         aileAd.setText(aile.getAileAd());
         aileSoyad.setText(aile.getAileSoyad());
