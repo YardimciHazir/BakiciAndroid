@@ -106,7 +106,7 @@ public class KisiselBilgiAileFragment extends Fragment {
                     String aileMail = ds.child("aileMail").getValue().toString();
                     aileList.add(new AileModel(aileAd,aileSoyad,aileMail));
                 }
-                CustomAdapter adapter=new CustomAdapter(getActivity(),aileList);
+                CustomAdapterAile adapter=new CustomAdapterAile(getActivity(),aileList);
                 listView.setAdapter(adapter);
                 dbRef.removeEventListener(this);
 
