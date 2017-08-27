@@ -16,7 +16,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity  extends AppCompatActivity {
+public class MainAileActivity extends AppCompatActivity {
 
     private EditText editTextUserName;
     private EditText editTextUserPassword;
@@ -42,7 +42,7 @@ public class MainActivity  extends AppCompatActivity {
 
         if(firebaseUser != null){ // check user session
 
-            Intent i = new Intent(MainActivity.this,ProfileActivity.class);
+            Intent i = new Intent(MainAileActivity.this,ProfileActivity.class);
             startActivity(i);
             finish();
         }
@@ -67,7 +67,7 @@ public class MainActivity  extends AppCompatActivity {
         buttonregisterAile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,RegisterActivity.class);
+                Intent intent = new Intent(MainAileActivity.this,KayitAile1.class);
                 startActivity(intent);
                 finish();
             }
@@ -76,13 +76,13 @@ public class MainActivity  extends AppCompatActivity {
 
     private void loginFunc() {
 
-        mAuth.signInWithEmailAndPassword(userName,userPassword).addOnCompleteListener(MainActivity.this,
+        mAuth.signInWithEmailAndPassword(userName,userPassword).addOnCompleteListener(MainAileActivity.this,
                 new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
 
-                            Intent i = new Intent(MainActivity.this,ProfileActivity.class);
+                            Intent i = new Intent(MainAileActivity.this,AileNavDrawer.class);
                             startActivity(i);
                             finish();
 

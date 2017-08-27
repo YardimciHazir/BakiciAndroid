@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class RegisterActivity2 extends AppCompatActivity {
+public class KayitAile2 extends AppCompatActivity {
 
     private Spinner ailespinnergender, ailespinnermarital, ailespinnereducation, ailespinnercity;
     private EditText ailetelefon;
@@ -55,7 +55,7 @@ public class RegisterActivity2 extends AppCompatActivity {
                     String egitim = education;
                     String sehir = city;
                     String telefon = telephone;
-                    Intent i = new Intent(getApplicationContext(), RegisterActivity3.class);
+                    Intent i = new Intent(getApplicationContext(), KayitAile3.class);
                     i.putExtra("cinsiyet",cinsiyet);
                     i.putExtra("medeni",medenidurum);
                     i.putExtra("egitim",egitim);

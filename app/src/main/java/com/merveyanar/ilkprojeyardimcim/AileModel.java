@@ -163,7 +163,7 @@ public class AileModel   {
         this.hastaFotograf = hastaFotograf;
     }
 
-    public AileModel() {
+    public AileModel(String aileAd, String aileSoyad, String aileMail) {
     }
 
     private String aileAd;

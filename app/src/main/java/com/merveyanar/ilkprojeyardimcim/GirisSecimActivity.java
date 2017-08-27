@@ -19,7 +19,7 @@ public class GirisSecimActivity extends AppCompatActivity {
         buttonAile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(GirisSecimActivity.this, MainActivity.class);//Aile Giriş işlemlerine götürür..
+                Intent i = new Intent(GirisSecimActivity.this, MainAileActivity.class);//Aile Giriş işlemlerine götürür..
 
                 startActivity(i);
 

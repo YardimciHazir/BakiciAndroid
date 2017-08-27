@@ -8,18 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 /**
  * Created by 7 on 01.08.2017.
  */
 
-public class RegisterActivity extends AppCompatActivity {
+public class KayitAile1 extends AppCompatActivity {
     private EditText aileFirstName,aileLastName,aileAddress,aileEmail,ailePassword,ailePasswordConfirm;
     private Button buttonRegisterA;
     private String userFirstName,userLastName,useraddress,useremail,userpassword,userpasswordconfirm;
@@ -60,7 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
                     String soyad = userLastName;
                     String adres = useraddress;
                     String sifretekrar = userpasswordconfirm;
-                    Intent i = new Intent(getApplicationContext(), RegisterActivity2.class);
+                    Intent i = new Intent(getApplicationContext(), KayitAile2.class);
                     i.putExtra("email",mail);
                     i.putExtra("sifre",sifre);
                     i.putExtra("ad",ad);

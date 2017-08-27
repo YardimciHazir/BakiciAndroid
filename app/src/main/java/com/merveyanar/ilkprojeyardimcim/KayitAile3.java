@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class RegisterActivity3 extends AppCompatActivity {
+public class KayitAile3 extends AppCompatActivity {
 
     private EditText hastaAd,hastaSoyad,hastaDogumTarihi;
     private Spinner hastaspinnergender,hastaspinnercare;
@@ -86,11 +86,11 @@ public class RegisterActivity3 extends AppCompatActivity {
         final String telefon = extras.getString("telefon");
 
         mAuth.createUserWithEmailAndPassword(mail,sifre)
-                .addOnCompleteListener(RegisterActivity3.this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(KayitAile3.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(Task<AuthResult> task) {
                         if (!task.isSuccessful()) {
-                            Toast.makeText(RegisterActivity3.this, "Yetkilendirme Hatası",
+                            Toast.makeText(KayitAile3.this, "Yetkilendirme Hatası",
                                     Toast.LENGTH_SHORT).show();
                         }
 
@@ -99,7 +99,7 @@ public class RegisterActivity3 extends AppCompatActivity {
                             databaseReferenceAile = FirebaseDatabase.getInstance().getReference("aile/"+FirebaseAuth.getInstance().getCurrentUser().getUid());
                             AileModel aileModel = new AileModel(ad,soyad,adres,mail,sifre,sifretekrar,telefon,medenidurum,egitim,cinsiyet,sehir,had,hsoyad,hgender,hcare,hdogumtarihi,"");
                             databaseReferenceAile.setValue(aileModel);
-                            startActivity(new Intent(RegisterActivity3.this, ProfileActivity.class));
+                            startActivity(new Intent(KayitAile3.this, AileNavDrawer.class));
                             finish();
                         }
                     }

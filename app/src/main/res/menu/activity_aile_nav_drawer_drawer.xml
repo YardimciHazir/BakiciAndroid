@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/anasayfa_aile"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Anasayfa" />
+        <item
+            android:id="@+id/profil_aile"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Profil" />
+        <item
+            android:id="@+id/mesajlar_aile"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Mesajlar" />
+
+        <item
+            android:id="@+id/gecmisilan_aile_aile"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Geçmiş İlanlar" />
+        <item
+            android:id="@+id/bakiciara_aile"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Bakıcı Ara" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+
+            <item
+                android:id="@+id/kredikazan_aile"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kredi Kazan" />
+            <item
+                android:id="@+id/kredisatinal_aile"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Kredi Satın Al" />
+            <item
+                android:id="@+id/sifredegistir_aile"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Şifre Değiştir" />
+            <item
+                android:id="@+id/iletisim_aile"
+                android:icon="@drawable/ic_menu_send"
+                android:title="İletişim" />
+            <item
+                android:id="@+id/cikis"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Çıkış" />
+        </menu>
+    </item>
+
+</menu>

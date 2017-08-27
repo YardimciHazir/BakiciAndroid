@@ -22,17 +22,21 @@
             android:name=".ProfileActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".KayitAile1"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainAileActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".MainBakiciActivity" />
         <activity android:name=".ProfileBakiciActivity" />
         <activity android:name=".RegisterBakiciActivity" />
         <activity android:name=".RegisterBakiciActivity2" />
-        <activity android:name=".RegisterActivity2" />
-        <activity android:name=".RegisterActivity3"></activity>
+        <activity android:name=".KayitAile2" />
+        <activity android:name=".KayitAile3" />
+        <activity
+            android:name=".AileNavDrawer"
+            android:label="@string/title_activity_aile_nav_drawer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

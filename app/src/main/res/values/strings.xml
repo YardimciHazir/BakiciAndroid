@@ -134,4 +134,5 @@
         <item>Yaşlı</item>
         <item>Çocuk</item>
     </string-array>
+    <string name="title_activity_aile_nav_drawer">AileNavDrawer</string>
 </resources>
