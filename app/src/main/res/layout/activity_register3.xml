@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.merveyanar.ilkprojeyardimcim.RegisterActivity3"
+    android:background="@color/pembeseven">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/hastaAd"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Hasta Adı" />
+
+        <EditText
+            android:id="@+id/hastaSoyad"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Hasta Soyadı" />
+
+        <EditText
+            android:id="@+id/hastaDogumTarihi"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Hasta Doğum Tarihi" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/hastaspinnerGender"
+            android:layout_height="wrap_content"
+            android:entries="@array/gender_arrays"
+            android:layout_marginTop="10dp"
+            ></Spinner>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/hastaspinnerCare"
+            android:layout_height="wrap_content"
+            android:entries="@array/care_arrays"
+            android:layout_marginTop="40dp"></Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtailemail"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtailesifre"/>
+
+        <Button
+            android:id="@+id/buttonRegisterA3"
+            android:background="@color/colorAccent"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#ffffff"
+            android:text="Kaydet"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

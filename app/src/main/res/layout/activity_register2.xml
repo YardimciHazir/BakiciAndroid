@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.merveyanar.ilkprojeyardimcim.RegisterActivity2"
+    android:background="@color/pembeseven">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/aileTelephone"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Hasta Yakını Telefon" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/ailespinnerGender"
+            android:layout_height="wrap_content"
+            android:entries="@array/gender_arrays"
+            android:layout_marginTop="10dp"
+            ></Spinner>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/ailespinnerEducation"
+            android:layout_height="wrap_content"
+            android:entries="@array/education_arrays"
+            android:layout_marginTop="30dp"></Spinner>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/ailespinnerMarital"
+            android:layout_height="wrap_content"
+            android:entries="@array/marital_arrays"
+            android:layout_marginTop="30dp"></Spinner>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/ailespinnerCity"
+            android:layout_height="wrap_content"
+            android:entries="@array/city_arrays"
+            android:layout_marginTop="30dp"></Spinner>
+
+        <Button
+            android:id="@+id/buttonRegisterA2"
+            android:background="@color/colorAccent"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#ffffff"
+            android:text="İlerle"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
