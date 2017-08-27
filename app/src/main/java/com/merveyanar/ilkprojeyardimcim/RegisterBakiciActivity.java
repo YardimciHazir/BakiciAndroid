@@ -28,22 +28,18 @@ import java.util.Date;
 public class RegisterBakiciActivity extends AppCompatActivity {
     private EditText bakiciFirstName,bakiciLastName,dateofBirth,email,password,passwordconfirm;
     private Button buttonRegisterB;
+    private String userFirstName,userLastName,userdateofbirth,useremail,userpassword,userpasswordconfirm;
     private FirebaseAuth mAuth;
-    private String userFirstName;
-    private String userLastName;
-    private String userdateofbirth;
-    private String useremail;
-    private String userpassword;
-    private String userpasswordconfirm;
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
     private DatabaseReference databaseReferenceBakici;
-    String ad ;
-    String soyad ;
-    String dogumTarihi;
-    String eMail;
-    String sifre;
-    ArrayList<BakiciModel> list;
+//    String ad ;
+//    String soyad ;
+//    String dogumTarihi;
+//    String eMail;
+//    String sifre;
+//    String sifretekrar;
+//    ArrayList<BakiciModel> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,10 +75,23 @@ public class RegisterBakiciActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Lütfen gerekli alanları doldurunuz!",Toast.LENGTH_SHORT).show();
 
                 }else{
-                    registerFunction();
-//                    Intent intent = new Intent(RegisterBakiciActivity.this,RegisterBakiciActivity2.class);
-//                    startActivity(intent);
-//                    finish();
+//                    registerFunction();
+
+                    String mail = useremail;
+                    String sifre = userpassword;
+                    String ad = userFirstName;
+                    String soyad = userLastName;
+                    String dogumtarihi = userdateofbirth;
+                    String sifretekrar = userpasswordconfirm;
+                    Intent i = new Intent(getApplicationContext(), RegisterBakiciActivity2.class);
+                    i.putExtra("email",mail);
+                    i.putExtra("sifre",sifre);
+                    i.putExtra("ad",ad);
+                    i.putExtra("soyad",soyad);
+                    i.putExtra("dogumtarihi",dogumtarihi);
+                    i.putExtra("sifretekrar",sifretekrar);
+                    startActivity(i);
+                    finish();
                 }
 
             }
@@ -91,11 +100,12 @@ public class RegisterBakiciActivity extends AppCompatActivity {
 
     private void registerFunction() {
 
-         ad = bakiciFirstName.getText().toString();
-         soyad = bakiciLastName.getText().toString();
-         dogumTarihi = dateofBirth.getText().toString();
-         eMail = email.getText().toString();
-         sifre = password.getText().toString();
+//         ad = bakiciFirstName.getText().toString();
+//         soyad = bakiciLastName.getText().toString();
+//         dogumTarihi = dateofBirth.getText().toString();
+//         eMail = email.getText().toString();
+//         sifre = password.getText().toString();
+//        sifretekrar=passwordconfirm.getText().toString();
 
         FirebaseUser user = mAuth.getCurrentUser();
 //        long msTime = System.currentTimeMillis();
@@ -119,7 +129,7 @@ public class RegisterBakiciActivity extends AppCompatActivity {
 //            Toast.makeText(getApplicationContext(),"Parola en az 6 haneli olmalıdır", Toast.LENGTH_SHORT).show();
 //        }
 
-        mAuth.createUserWithEmailAndPassword(eMail,sifre)
+        mAuth.createUserWithEmailAndPassword(useremail,userpassword)
                 .addOnCompleteListener(RegisterBakiciActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(Task<AuthResult> task) {
@@ -130,12 +140,21 @@ public class RegisterBakiciActivity extends AppCompatActivity {
                         }
 
                         else {
-
+//                            Bundle bundlepro = new Bundle();
+//                            bundlepro.putString("name", email.getText().toString());
+//                            bundlepro.putString("password", password.getText().toString());
                             databaseReferenceBakici = FirebaseDatabase.getInstance().getReference("bakici/"+FirebaseAuth.getInstance().getCurrentUser().getUid());
-                            BakiciModel bakiciModel = new BakiciModel(ad,soyad,dogumTarihi,"",eMail,sifre,passwordconfirm.getText().toString(),"","","","","","","","","","","");
+                            BakiciModel bakiciModel = new BakiciModel(userFirstName,userLastName,userdateofbirth,"",useremail,userpassword,userpasswordconfirm,"","","","","","","","","");
                             databaseReferenceBakici.setValue(bakiciModel);
-                            startActivity(new Intent(RegisterBakiciActivity.this, RegisterBakiciActivity2.class));
+                            String mail = useremail;
+                            String sifre = userpassword;
+                            Intent i = new Intent(getApplicationContext(), RegisterBakiciActivity2.class);
+                            i.putExtra("email",mail);
+                            i.putExtra("sifre",sifre);
+                            startActivity(i);
+//                            startActivity(new Intent(RegisterBakiciActivity.this, RegisterBakiciActivity2.class));
                             finish();
+
                         }
 
                     }

@@ -13,13 +13,13 @@ public class GirisSecimActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_giris_secim);
 
-        buttonBakici=(Button)findViewById(R.id.buttonBakici);
-        buttonAile=(Button)findViewById(R.id.buttonAile);
+        buttonBakici = (Button)findViewById(R.id.buttonBakici);
+        buttonAile = (Button)findViewById(R.id.buttonAile);
 
         buttonAile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getBaseContext(), MainActivity.class);//Aile Giriş işlemlerine götürür..
+                Intent i = new Intent(GirisSecimActivity.this, MainActivity.class);//Aile Giriş işlemlerine götürür..
 
                 startActivity(i);
 

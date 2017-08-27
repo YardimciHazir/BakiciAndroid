@@ -22,7 +22,7 @@ public class MainActivity  extends AppCompatActivity {
     private EditText editTextUserPassword;
     private Button buttonLoginAile;
     private TextView txtRegisterAile;
-    private Button buttonRegisterAile;
+    private Button buttonregisterAile;
     private FirebaseAuth mAuth;
     private FirebaseUser firebaseUser;
     private String userName;
@@ -35,7 +35,7 @@ public class MainActivity  extends AppCompatActivity {
         editTextUserName = (EditText)findViewById(R.id.editTextUserName);
         editTextUserPassword = (EditText)findViewById(R.id.editTextUserPassword);
         buttonLoginAile = (Button) findViewById(R.id.buttonLoginAile);
-        buttonRegisterAile = (Button) findViewById(R.id.buttonRegisterAile);
+        buttonregisterAile = (Button) findViewById(R.id.buttonRegisterAile);
 
         mAuth = FirebaseAuth.getInstance();
         firebaseUser = mAuth.getCurrentUser(); // authenticated user
@@ -64,7 +64,7 @@ public class MainActivity  extends AppCompatActivity {
             }
         });
 
-        buttonRegisterAile.setOnClickListener(new View.OnClickListener() {
+        buttonregisterAile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,RegisterActivity.class);

@@ -37,6 +37,7 @@
 
         <EditText
             android:id="@+id/email"
+            android:inputType="textEmailAddress"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
@@ -57,6 +58,7 @@
             android:id="@+id/passwordconfirm"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             android:hint="Şifre Tekrar" />
 

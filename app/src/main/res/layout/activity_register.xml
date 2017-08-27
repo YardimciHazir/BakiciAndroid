@@ -11,9 +11,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <EditText
+            android:id="@+id/aileFirstName"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Hasta Yakını Ad" />
 
         <EditText
-            android:id="@+id/registerUserName"
+            android:id="@+id/aileLastName"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Hasta Yakını Soyad" />
+
+        <EditText
+            android:id="@+id/aileAddress"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Adres" />
+
+        <EditText
+            android:id="@+id/aileEmail"
+            android:inputType="textEmailAddress"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
@@ -22,21 +46,31 @@
 
         <EditText
             android:inputType="textPassword"
-            android:id="@+id/registerPassword"
+            android:id="@+id/ailePassword"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             android:hint="Şifre" />
 
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/ailePasswordConfirm"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Şifre Tekrar" />
+
         <Button
-            android:id="@+id/buttonRegister"
+            android:id="@+id/buttonRegisterA"
             android:background="@color/colorAccent"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_margin="15dp"
             android:layout_marginBottom="20dp"
             android:textColor="#ffffff"
-            android:text="Kayıt Ol"/>
+            android:text="İlerle"/>
 
 
     </LinearLayout>

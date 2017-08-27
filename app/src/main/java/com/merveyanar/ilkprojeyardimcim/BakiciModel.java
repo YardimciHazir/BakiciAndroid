@@ -8,6 +8,25 @@ import java.util.Date;
 
 public class BakiciModel {
 
+    private String ad;
+    private String soyad;
+    private String dogumTarihi;
+    private String adres;
+    private String email;
+    private String sifre;
+    private String sifretekrar;
+    private String uyruk;
+    private String medeniDurum;
+//    private String kanGrubu;
+    private String egitimDurumu;
+    private String fotograf;
+    private String sertifika;
+    private String deneyimBilgileri;
+    private String cinsiyet;
+    private String bakimTercihi;
+    private String ilSecim ;
+//    private String ilceSecim ;
+
     public String getAd() {
         return ad;
     }
@@ -56,6 +75,14 @@ public class BakiciModel {
         this.sifre = sifre;
     }
 
+    public String getSifretekrar() {
+        return sifretekrar;
+    }
+
+    public void setSifretekrar(String sifretekrar) {
+        this.sifretekrar = sifretekrar;
+    }
+
     public String getUyruk() {
         return uyruk;
     }
@@ -72,13 +99,13 @@ public class BakiciModel {
         this.medeniDurum = medeniDurum;
     }
 
-    public String getKanGrubu() {
-        return kanGrubu;
-    }
-
-    public void setKanGrubu(String kanGrubu) {
-        this.kanGrubu = kanGrubu;
-    }
+//    public String getKanGrubu() {
+//        return kanGrubu;
+//    }
+//
+//    public void setKanGrubu(String kanGrubu) {
+//        this.kanGrubu = kanGrubu;
+//    }
 
     public String getEgitimDurumu() {
         return egitimDurumu;
@@ -108,9 +135,7 @@ public class BakiciModel {
         return deneyimBilgileri;
     }
 
-    public void setDeneyimBilgileri(String deneyimBilgileri) {
-        this.deneyimBilgileri = deneyimBilgileri;
-    }
+    public void setDeneyimBilgileri(String deneyimBilgileri) { this.deneyimBilgileri = deneyimBilgileri; }
 
     public String getCinsiyet() {
         return cinsiyet;
@@ -136,25 +161,25 @@ public class BakiciModel {
         this.ilSecim = ilSecim;
     }
 
-    public String getIlceSecim() {
-        return ilceSecim;
-    }
+//    public String getIlceSecim() {
+//        return ilceSecim;
+//    }
+//
+//    public void setIlceSecim(String ilceSecim) {
+//        this.ilceSecim = ilceSecim;
+//    }
 
-    public void setIlceSecim(String ilceSecim) {
-        this.ilceSecim = ilceSecim;
-    }
-
-    public BakiciModel(int id, String ad, String soyad, Date dogumTarihi, String adres, String email, String sifre, String uyruk, String medeniDurum, String kanGrubu, String egitimDurumu, String fotograf, String sertifika, String deneyimBilgileri, String cinsiyet, String bakimTercihi, String ilSecim, String ilceSecim) {
-        this.id = id;
+    public BakiciModel( String ad, String soyad, String dogumTarihi, String adres, String email, String sifre, String sifretekrar, String uyruk, String medeniDurum, String egitimDurumu, String fotograf, String sertifika, String deneyimBilgileri, String cinsiyet, String bakimTercihi, String ilSecim) {
         this.ad = ad;
         this.soyad = soyad;
         this.dogumTarihi = dogumTarihi;
         this.adres = adres;
         this.email = email;
         this.sifre = sifre;
+        this.sifretekrar = sifretekrar;
         this.uyruk = uyruk;
         this.medeniDurum = medeniDurum;
-        this.kanGrubu = kanGrubu;
+//        this.kanGrubu = kanGrubu;
         this.egitimDurumu = egitimDurumu;
         this.fotograf = fotograf;
         this.sertifika = sertifika;
@@ -162,7 +187,7 @@ public class BakiciModel {
         this.cinsiyet = cinsiyet;
         this.bakimTercihi = bakimTercihi;
         this.ilSecim = ilSecim;
-        this.ilceSecim = ilceSecim;
+//        this.ilceSecim = ilceSecim;
     }
 
     public BakiciModel(){

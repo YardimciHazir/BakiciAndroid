@@ -30,7 +30,9 @@
         <activity android:name=".MainBakiciActivity" />
         <activity android:name=".ProfileBakiciActivity" />
         <activity android:name=".RegisterBakiciActivity" />
-        <activity android:name=".RegisterBakiciActivity2"></activity>
+        <activity android:name=".RegisterBakiciActivity2" />
+        <activity android:name=".RegisterActivity2" />
+        <activity android:name=".RegisterActivity3"></activity>
     </application>
 
 </manifest>

@@ -4,11 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.merveyanar.ilkprojeyardimcim.RegisterBakiciActivity2">
+    tools:context="com.merveyanar.ilkprojeyardimcim.RegisterBakiciActivity2"
+    android:background="@color/pembeseven">
 
     <Spinner
         android:layout_width="match_parent"
         android:id="@+id/spinnerGender"
-        android:layout_height="wrap_content"></Spinner>
+        android:layout_height="wrap_content"
+        android:entries="@array/gender_arrays"
+        android:layout_marginTop="20dp"
+        ></Spinner>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:id="@+id/spinnerEducation"
+        android:layout_height="wrap_content"
+        android:entries="@array/education_arrays"
+        android:layout_marginTop="60dp"></Spinner>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:id="@+id/spinnerMarital"
+        android:layout_height="wrap_content"
+        android:entries="@array/marital_arrays"
+        android:layout_marginTop="100dp"></Spinner>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:id="@+id/spinnerExperience"
+        android:layout_height="wrap_content"
+        android:entries="@array/experience_arrays"
+        android:layout_marginTop="140dp"></Spinner>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:id="@+id/spinnerCity"
+        android:layout_height="wrap_content"
+        android:entries="@array/city_arrays"
+        android:layout_marginTop="180dp"></Spinner>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:id="@+id/spinnerCare"
+        android:layout_height="wrap_content"
+        android:entries="@array/care_arrays"
+        android:layout_marginTop="220dp"></Spinner>
+
+    <EditText
+        android:id="@+id/nationality"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="260dp"
+        android:hint="Uyruk" />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="300dp"
+        android:hint="Adres" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtmail"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtsifre"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonRegister2"
+        android:background="@color/colorAccent"
+        android:text="Kaydet"
+        android:layout_marginTop="450dp"
+        />
+
+    <!--<Button-->
+        <!--android:id="@+id/buttonRegisterB2"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_margin="15dp"-->
+        <!--android:layout_marginTop="220dp"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:text="İlerle"/>-->
 
 </RelativeLayout>
