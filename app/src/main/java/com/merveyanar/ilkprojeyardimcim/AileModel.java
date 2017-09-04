@@ -164,6 +164,9 @@ public class AileModel   {
     }
 
     public AileModel(String aileAd, String aileSoyad, String aileMail) {
+        this.aileAd=aileAd;
+        this.aileSoyad=aileSoyad;
+        this.aileMail=aileMail;
     }
 
     private String aileAd;

@@ -11,30 +11,30 @@
 
 
         <TextView
-            android:id="@+id/aileFirstName"
+            android:id="@+id/aileAd"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
-            android:hint="Hasta Yakını Ad" />
+            />
 
         <TextView
-            android:id="@+id/aileLastName"
+            android:id="@+id/aileSoyad"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
-            android:hint="Hasta Yakını Soyad" />
+             />
 
 
         <TextView
-            android:id="@+id/aileEmail"
+            android:id="@+id/aileMail"
             android:inputType="textEmailAddress"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
-            android:hint="Email" />
+            />
 
     </LinearLayout>
 

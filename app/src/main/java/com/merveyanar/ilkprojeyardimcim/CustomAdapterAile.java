@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by zeynepsahin on 27.8.2017.
@@ -21,16 +22,20 @@ public class CustomAdapterAile extends BaseAdapter {
 
     ArrayList<AileModel> aileList;
 
-    public CustomAdapterAile(Activity activity, ArrayList<AileModel> aileList){
-        layoutInflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        this.aileList = aileList;}
+    private Context mContext;
+    private List<AileModel> mAileList;
+
+    public CustomAdapterAile(Context mContext, List<AileModel> mAileList){
+        this.mContext=mContext;
+        this.mAileList=mAileList;
+    }
     @Override
     public int getCount() {
-        return aileList.size();
+        return mAileList.size();
     }
     @Override
     public Object getItem(int position) {
-        return aileList.get(position);
+        return mAileList.get(position);
     }
     @Override
     public long getItemId(int position) {
@@ -39,18 +44,15 @@ public class CustomAdapterAile extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        AileModel aile = aileList.get(position);
+       View satir = View.inflate(mContext,R.layout.custom_satir_aile,null);
 
-        View satir = layoutInflater.inflate(R.layout.custom_satir_aile,null);
+        TextView aileAd= (TextView) satir.findViewById(R.id.aileAd);
+        TextView aileSoyad= (TextView) satir.findViewById(R.id.aileSoyad);
+        TextView aileMail= (TextView) satir.findViewById(R.id.aileMail);
 
-        TextView aileAd= (TextView) satir.findViewById(R.id.aileFirstName);
-        TextView aileSoyad= (TextView) satir.findViewById(R.id.aileLastName);
-        TextView aileMail= (TextView) satir.findViewById(R.id.aileEmail);
-
-        aileAd.setText(aile.getAileAd());
-        aileSoyad.setText(aile.getAileSoyad());
-        aileMail.setText(aile.getAileMail());
-
+        aileAd.setText(mAileList.get(position).getAileAd());
+        aileSoyad.setText(mAileList.get(position).getAileSoyad());
+        aileMail.setText(mAileList.get(position).getAileMail());
 
         return satir;
     }
