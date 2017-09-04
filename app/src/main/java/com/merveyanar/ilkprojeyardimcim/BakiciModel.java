@@ -187,6 +187,19 @@ public class BakiciModel {
 //        this.ilceSecim = ilceSecim;
     }
 
+    public BakiciModel(String ad, String soyad, String dogumTarihi, String adres, String email, String medeniDurum, String egitimDurumu, String cinsiyet, String bakimTercihi, String ilSecim) {
+        this.ad = ad;
+        this.soyad = soyad;
+        this.dogumTarihi = dogumTarihi;
+        this.adres = adres;
+        this.email = email;
+        this.medeniDurum = medeniDurum;
+        this.egitimDurumu = egitimDurumu;
+        this.cinsiyet = cinsiyet;
+        this.bakimTercihi = bakimTercihi;
+        this.ilSecim = ilSecim;
+    }
+
     public BakiciModel(){
 
     }
