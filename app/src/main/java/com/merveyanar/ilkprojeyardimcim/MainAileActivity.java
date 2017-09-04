@@ -40,12 +40,6 @@ public class MainAileActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         firebaseUser = mAuth.getCurrentUser(); // authenticated user
 
-        if(firebaseUser != null){ // check user session
-
-            Intent i = new Intent(MainAileActivity.this,ProfileActivity.class);
-            startActivity(i);
-            finish();
-        }
 
         buttonLoginAile.setOnClickListener(new View.OnClickListener() {
             @Override
