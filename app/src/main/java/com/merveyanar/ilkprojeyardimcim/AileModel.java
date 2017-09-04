@@ -143,6 +143,9 @@ public class AileModel   {
         this.hastaFotograf = hastaFotograf;
     }
 
+    public AileModel() {
+    }
+
     public AileModel(String aileAd, String aileSoyad, String aileAdres, String aileMail, String aileSifre, String aileSifreTekrar, String aileTelefon, String aileMedeniDurum, String aileEgitimDurumu, String aileCinsiyet, String aileIl, String hastaAd, String hastaSoyad, String hastaCinsiyet, String hastaEngel, String hastaDogumTarihi, String hastaFotograf) {
         this.aileAd = aileAd;
         this.aileSoyad = aileSoyad;

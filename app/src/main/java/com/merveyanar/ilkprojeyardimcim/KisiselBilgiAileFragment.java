@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -48,6 +49,7 @@ public class KisiselBilgiAileFragment extends Fragment {
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
     private DatabaseReference databaseReferenceAile;
+    private FirebaseUser firebaseUser;
 
     //private DatabaseReference databaseReference;
 
@@ -93,19 +95,26 @@ public class KisiselBilgiAileFragment extends Fragment {
         aileList=new ArrayList<AileModel>();
         listView= (ListView) view.findViewById(R.id.listView);
         database= FirebaseDatabase.getInstance();
+        final FirebaseAuth mAuth=FirebaseAuth.getInstance();
+        firebaseUser = mAuth.getCurrentUser();
         //databaseReferenceAile = FirebaseDatabase.getInstance().getReference("aile");
-        final DatabaseReference dbRef=database.getReference("aile");
+//        final DatabaseReference dbRef=database.getReference("aile");
+
+        final DatabaseReference dbRef = database.getReference("aile").child(
+                firebaseUser.getUid());
 
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                for (DataSnapshot ds:dataSnapshot.getChildren()){
-                    String aileAd = ds.child("aileAd").getValue().toString();
-                    String aileSoyad = ds.child("aileSoyad").getValue().toString();
-                    String aileMail = ds.child("aileMail").getValue().toString();
-                    aileList.add(new AileModel(aileAd,aileSoyad,aileMail));
-                }
+                aileList.clear();
+//                for (DataSnapshot ds:dataSnapshot.getChildren()){
+                    AileModel aileModel = dataSnapshot.getValue(AileModel.class);
+//                    String aileAd = ds.child("aileAd").getValue().toString();
+//                    String aileSoyad = ds.child("aileSoyad").getValue().toString();
+//                    String aileMail = ds.child("aileMail").getValue().toString();
+                    aileList.add(new AileModel(aileModel.getAileAd(),aileModel.getAileSoyad(),aileModel.getAileMail()));
+//                }
                 CustomAdapterAile adapter=new CustomAdapterAile(getActivity(),aileList);
                 listView.setAdapter(adapter);
                 dbRef.removeEventListener(this);
