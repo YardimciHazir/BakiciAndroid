@@ -2,12 +2,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
     tools:context="com.merveyanar.ilkprojeyardimcim.KrediSatinAlAileFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/name"
+        android:layout_margin="5dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:text="Reklamsız Yardımcım Hazır."
+        android:textColor="@color/acikmor"/>
+
+    <TextView
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_margin="5dp"
+        android:id="@+id/tee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/name"
+        android:text="Yardımcım Hazır'da bakıcı bulmak için reklamsız aşağıdaki paketlerden birini alabilirsiniz" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:textColor="@color/common_google_signin_btn_text_light"
+        android:id="@+id/ttr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tee"
+        android:text="KREDİ SATIN AL" />
+    <TextView
+        android:layout_margin="5dp"
+        android:textColor="@color/pembeeight"
+        android:id="@+id/tyy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/ttr"
+        android:text="Söz verdiğimiz gibi hergün 1 CV bizden. Daha fazlasını istersen aşağıdaki indirimli kredi paketlerinden yararlanabilirsin." />
 
 </RelativeLayout>
