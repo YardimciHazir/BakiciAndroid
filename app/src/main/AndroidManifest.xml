@@ -9,31 +9,101 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".GirisSecimActivity"
-            android:screenOrientation="portrait">
+
+
+        <activity android:name=".HosgeldinEkrani">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".KayitAile1"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".MainAileActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".MainBakiciActivity" />
-        <activity android:name=".ProfileBakiciActivity" />
-        <activity android:name=".RegisterBakiciActivity" />
-        <activity android:name=".RegisterBakiciActivity2" />
-        <activity android:name=".KayitAile2" />
-        <activity android:name=".KayitAile3" />
+
+        <activity android:name=".GirisSecimActivity">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.GIRISSECIMACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".KayitAile1">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.KAYITAILE1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainAileActivity">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.MAINAILEACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".MainBakiciActivity">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.MAINBAKICIACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".ProfileBakiciActivity">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.PROFILEBAKICIACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".RegisterBakiciActivity">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.REGISTERBAKICIACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".RegisterBakiciActivity2">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.REGISTERBAKICIACTIVITY2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".KayitAile2">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.KAYITAILE2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".KayitAile3">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.KAYITAILE3" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
         <activity
             android:name=".AileNavDrawer"
             android:label="@string/title_activity_aile_nav_drawer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
     </application>
 
 </manifest>
