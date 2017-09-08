@@ -70,7 +70,8 @@ public class MesajlarAileFragment extends Fragment {
                 String telNo = "5321111111";//mesaj gönderilecek numara
                 String mesaj = "Bu mesaj mobilhanem.com tarafından gönderilmiştir."; //mesaj
 
-                //Bu kısım mesaj application açmak için.Yani sms uygulaması açılır. Numara kısmı ve mesaj kısmı otomatik doldurulur.
+                //Bu kısım mesaj application açmak için.
+                // Yani sms uygulaması açılır. Numara kısmı ve mesaj kısmı otomatik doldurulur.
 
                 Intent mesajGonder = new Intent(Intent.ACTION_VIEW);
                 mesajGonder.setData(Uri.parse("sms:"+ telNo));
@@ -78,7 +79,8 @@ public class MesajlarAileFragment extends Fragment {
                 startActivity(mesajGonder);
 
 
-			/*		Bu kısım direk mesaj atmak için	.Herhangi bir uygulama açmaz direk mesaj atar.Bunun yerine üsteki daha sağlıklı
+			/*		Bu kısım direk mesaj atmak için	.Herhangi bir uygulama açmaz direk mesaj atar.
+			Bunun yerine üsteki daha sağlıklı
 				SmsManager smsManager = SmsManager.getDefault();
 				smsManager.sendTextMessage(telNo, null, mesaj, null, null);
 			*/
