@@ -1,10 +1,12 @@
 package com.merveyanar.ilkprojeyardimcim;
 
+import java.io.Serializable;
+
 /**
  * Created by zeynepsahin on 27.8.2017.
  */
 
-public class BakiciModel {
+public class BakiciModel implements Serializable {
     private String ad;
     private String soyad;
     private String dogumTarihi;

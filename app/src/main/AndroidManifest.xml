@@ -2,108 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.merveyanar.ilkprojeyardimcim">
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-
-
-        <activity android:name=".HosgeldinEkrani">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".GirisSecimActivity">
-            <intent-filter>
-                <action android:name="com.merveyanar.ilkprojeyardimcim.GIRISSECIMACTIVITY" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-
-        <activity android:name=".KayitAile1">
-            <intent-filter>
-                <action android:name="com.merveyanar.ilkprojeyardimcim.KAYITAILE1" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".MainAileActivity">
-            <intent-filter>
-                <action android:name="com.merveyanar.ilkprojeyardimcim.MAINAILEACTIVITY" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-
-        <activity android:name=".MainBakiciActivity">
-            <intent-filter>
-                <action android:name="com.merveyanar.ilkprojeyardimcim.MAINBAKICIACTIVITY" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-
-        <activity android:name=".ProfileBakiciActivity">
-            <intent-filter>
-                <action android:name="com.merveyanar.ilkprojeyardimcim.PROFILEBAKICIACTIVITY" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-
-        <activity android:name=".RegisterBakiciActivity">
-            <intent-filter>
-                <action android:name="com.merveyanar.ilkprojeyardimcim.REGISTERBAKICIACTIVITY" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-
-        <activity android:name=".RegisterBakiciActivity2">
-            <intent-filter>
-                <action android:name="com.merveyanar.ilkprojeyardimcim.REGISTERBAKICIACTIVITY2" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-
-        <activity android:name=".KayitAile2">
-            <intent-filter>
-                <action android:name="com.merveyanar.ilkprojeyardimcim.KAYITAILE2" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-
-        <activity android:name=".KayitAile3">
-            <intent-filter>
-                <action android:name="com.merveyanar.ilkprojeyardimcim.KAYITAILE3" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-
-        <activity
-            android:name=".AileNavDrawer"
-            android:label="@string/title_activity_aile_nav_drawer"
-            android:theme="@style/AppTheme.NoActionBar" />
-    </application>
-
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.WRITE_SMS" />
@@ -120,4 +18,89 @@
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".HosgeldinEkrani">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".GirisSecimActivity">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.GIRISSECIMACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".KayitAile1">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.KAYITAILE1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainAileActivity">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.MAINAILEACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainBakiciActivity">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.MAINBAKICIACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ProfileBakiciActivity">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.PROFILEBAKICIACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterBakiciActivity">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.REGISTERBAKICIACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterBakiciActivity2">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.REGISTERBAKICIACTIVITY2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".KayitAile2">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.KAYITAILE2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".KayitAile3">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.KAYITAILE3" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AileNavDrawer"
+            android:label="@string/title_activity_aile_nav_drawer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".BakiciDetayGit"></activity>
+    </application>
+
 </manifest>

@@ -1,12 +1,13 @@
 package com.merveyanar.ilkprojeyardimcim;
 
-import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -67,6 +68,17 @@ public class BakiciAraAileFragment extends Fragment {
         database= FirebaseDatabase.getInstance();
 
         final DatabaseReference dbRef=database.getReference("bakici");
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+
+                Intent intent=new  Intent(getActivity(),BakiciDetayGit.class);
+                intent.putExtra("bakici",bakiciList.get(position));
+                startActivity(intent);
+            }
+        });
+
 
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -93,6 +105,7 @@ public class BakiciAraAileFragment extends Fragment {
                 listView.setAdapter(adapter);
                 dbRef.removeEventListener(this);
             }
+
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
