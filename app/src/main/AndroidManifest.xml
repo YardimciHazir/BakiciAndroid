@@ -82,6 +82,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".RegisterBakiciActivity3">
+            <intent-filter>
+                <action android:name="com.merveyanar.ilkprojeyardimcim.REGISTERBAKICIACTIVITY3" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".KayitAile2">
             <intent-filter>
                 <action android:name="com.merveyanar.ilkprojeyardimcim.KAYITAILE2" />
