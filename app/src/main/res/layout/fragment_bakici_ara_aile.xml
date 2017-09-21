@@ -4,20 +4,18 @@
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
     android:orientation="vertical"
-    android:padding="50dp"
     tools:context="com.merveyanar.ilkprojeyardimcim.KisiselBilgiAileFragment">
-
+<TextView
+    android:id="@+id/text"
+    android:textAllCaps="true"
+    android:text="Bakıcı Ara"
+    android:textSize="20dp"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-    <Button
-        android:id="@+id/btnGeri"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="0.11"
-        android:background="@color/pembefive"
-        android:text="Geri Gel"
-        android:textColor="#FFFFFF" />
+
 </LinearLayout>

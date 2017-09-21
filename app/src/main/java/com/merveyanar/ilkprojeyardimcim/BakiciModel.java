@@ -2,10 +2,6 @@ package com.merveyanar.ilkprojeyardimcim;
 
 import java.io.Serializable;
 
-/**
- * Created by zeynepsahin on 27.8.2017.
- */
-
 public class BakiciModel implements Serializable {
     private String ad;
     private String soyad;
@@ -16,14 +12,13 @@ public class BakiciModel implements Serializable {
     private String sifretekrar;
     private String uyruk;
     private String medeniDurum;
-    //    private String kanGrubu;
     private String egitimDurumu;
     private String fotograf;
     private String sertifika;
     private String deneyimBilgileri;
     private String cinsiyet;
     private String bakimTercihi;
-    private String ilSecim ;
+    private String ilSecim;
 //    private String ilceSecim ;
 
     public String getAd() {
@@ -98,13 +93,6 @@ public class BakiciModel implements Serializable {
         this.medeniDurum = medeniDurum;
     }
 
-//    public String getKanGrubu() {
-//        return kanGrubu;
-//    }
-//
-//    public void setKanGrubu(String kanGrubu) {
-//        this.kanGrubu = kanGrubu;
-//    }
 
     public String getEgitimDurumu() {
         return egitimDurumu;
@@ -134,7 +122,9 @@ public class BakiciModel implements Serializable {
         return deneyimBilgileri;
     }
 
-    public void setDeneyimBilgileri(String deneyimBilgileri) { this.deneyimBilgileri = deneyimBilgileri; }
+    public void setDeneyimBilgileri(String deneyimBilgileri) {
+        this.deneyimBilgileri = deneyimBilgileri;
+    }
 
     public String getCinsiyet() {
         return cinsiyet;
@@ -160,15 +150,7 @@ public class BakiciModel implements Serializable {
         this.ilSecim = ilSecim;
     }
 
-//    public String getIlceSecim() {
-//        return ilceSecim;
-//    }
-//
-//    public void setIlceSecim(String ilceSecim) {
-//        this.ilceSecim = ilceSecim;
-//    }
-
-    public BakiciModel( String ad, String soyad, String dogumTarihi, String adres, String email, String sifre, String sifretekrar, String uyruk, String medeniDurum, String egitimDurumu, String fotograf, String sertifika, String deneyimBilgileri, String cinsiyet, String bakimTercihi, String ilSecim) {
+    public BakiciModel(String ad, String soyad, String dogumTarihi, String adres, String email, String sifre, String sifretekrar, String uyruk, String medeniDurum, String egitimDurumu, String fotograf, String sertifika, String deneyimBilgileri, String cinsiyet, String bakimTercihi, String ilSecim) {
         this.ad = ad;
         this.soyad = soyad;
         this.dogumTarihi = dogumTarihi;
@@ -178,7 +160,6 @@ public class BakiciModel implements Serializable {
         this.sifretekrar = sifretekrar;
         this.uyruk = uyruk;
         this.medeniDurum = medeniDurum;
-//        this.kanGrubu = kanGrubu;
         this.egitimDurumu = egitimDurumu;
         this.fotograf = fotograf;
         this.sertifika = sertifika;
@@ -186,7 +167,7 @@ public class BakiciModel implements Serializable {
         this.cinsiyet = cinsiyet;
         this.bakimTercihi = bakimTercihi;
         this.ilSecim = ilSecim;
-//        this.ilceSecim = ilceSecim;
+
     }
 
     public BakiciModel(String ad, String soyad, String dogumTarihi, String adres, String email, String medeniDurum, String egitimDurumu, String cinsiyet, String bakimTercihi, String ilSecim) {
@@ -202,7 +183,7 @@ public class BakiciModel implements Serializable {
         this.ilSecim = ilSecim;
     }
 
-    public BakiciModel(){
+    public BakiciModel() {
 
     }
 }

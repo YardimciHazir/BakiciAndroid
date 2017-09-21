@@ -79,15 +79,7 @@ public class KisiselBilgiAileFragment extends Fragment {
         final FirebaseAuth mAuth = FirebaseAuth.getInstance();
         firebaseUser = mAuth.getCurrentUser();
 
-        btnGeri=(Button)view.findViewById(R.id.btnGeri);
-        btnGeri.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(),AileNavDrawer.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-            }
-        });
+
 
         final DatabaseReference dbRef = database.getReference("aile").child(
                 firebaseUser.getUid());

@@ -1,10 +1,10 @@
 package com.merveyanar.ilkprojeyardimcim;
 
 import android.content.DialogInterface;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
@@ -45,6 +45,7 @@ public class ProfileBakiciActivity extends AppCompatActivity {
             auth.removeAuthStateListener(authListener);
         }
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,10 +63,10 @@ public class ProfileBakiciActivity extends AppCompatActivity {
             }
         };
 
-        userNameTxt = (TextView)findViewById(R.id.userNameTxt);
+        userNameTxt = (TextView) findViewById(R.id.userNameTxt);
         changeEmailBttn = (Button) findViewById(R.id.changeEmailBttn);
-        changePasswordBttn = (Button)findViewById(R.id.changePasswordBttn);
-        signOutBttn = (Button)findViewById(R.id.signOutBttn);
+        changePasswordBttn = (Button) findViewById(R.id.changePasswordBttn);
+        signOutBttn = (Button) findViewById(R.id.signOutBttn);
 
         userNameTxt.setText("Bakıcı Email:" + " " + auth.getCurrentUser().getEmail());
 
@@ -80,7 +81,7 @@ public class ProfileBakiciActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 str = "Lütfen yeni e-posta adresini giriniz.";
-                changeEmailOrPasswordFunc(str,true);
+                changeEmailOrPasswordFunc(str, true);
             }
         });
 
@@ -88,10 +89,11 @@ public class ProfileBakiciActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 str = "Lütfen yeni şifreyi giriniz.";
-                changeEmailOrPasswordFunc(str,false);
+                changeEmailOrPasswordFunc(str, false);
             }
         });
     }
+
     private void signOutFunc() {
 
         auth.signOut();
@@ -108,7 +110,7 @@ public class ProfileBakiciActivity extends AppCompatActivity {
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT);
         edit.setLayoutParams(lp);
-        if(!option){  // password type
+        if (!option) {  // password type
             edit.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         }
         builder.setTitle(title);
@@ -126,17 +128,17 @@ public class ProfileBakiciActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
 
-                        if(edit.getText().toString().isEmpty()){
+                        if (edit.getText().toString().isEmpty()) {
 
                             edit.setError("Lütfen ilgili alanı doldurunuz!");
 
-                        }else{
+                        } else {
 
-                            if(option){ // email change
+                            if (option) { // email change
 
                                 changeEmail();
 
-                            }else{  // password change
+                            } else {  // password change
 
                                 changePassword();
 
