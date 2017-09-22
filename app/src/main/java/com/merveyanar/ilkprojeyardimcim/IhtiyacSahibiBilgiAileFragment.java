@@ -7,30 +7,42 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ListView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link IhtiyacSahibiBilgiAileFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link IhtiyacSahibiBilgiAileFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class IhtiyacSahibiBilgiAileFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    ArrayList<AileModel> aileList;
+    ListView listView_ihtiyac;
+    Button btnGeri;
+
+    private FirebaseAuth mAuth;
+    private FirebaseDatabase database;
+    private DatabaseReference databaseReference;
+    private DatabaseReference databaseReferenceAile;
+    private FirebaseUser firebaseUser;
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
+
     private String mParam1;
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
 
     public IhtiyacSahibiBilgiAileFragment() {
-        // Required empty public constructor
+
     }
 
     /**
@@ -65,8 +77,40 @@ public class IhtiyacSahibiBilgiAileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 //
-        View rootView = inflater.inflate(R.layout.fragment_ihtiyac_sahibi_bilgi_aile, container, false);
-        return rootView;
+        View view = inflater.inflate(R.layout.fragment_ihtiyac_sahibi_bilgi_aile, container, false);
+
+        aileList = new ArrayList<AileModel>();
+        listView_ihtiyac = (ListView) view.findViewById(R.id.listView_ihtiyac);
+        database = FirebaseDatabase.getInstance();
+        final FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        firebaseUser = mAuth.getCurrentUser();
+
+
+
+        final DatabaseReference dbRef = database.getReference("aile").child(
+                firebaseUser.getUid());
+
+        dbRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                aileList.clear();
+                AileModel aileModel = dataSnapshot.getValue(AileModel.class);
+                aileList.add(new AileModel("","","","","","","","","","","",aileModel.getHastaAd(),aileModel.getHastaSoyad(),aileModel.getHastaCinsiyet(),aileModel.getHastaEngel(),aileModel.getHastaDogumTarihi(),""));
+
+                CustomAdapterAileIhtiyacSahibi adapter = new CustomAdapterAileIhtiyacSahibi(getActivity(), aileList);
+                listView_ihtiyac.setAdapter(adapter);
+                dbRef.removeEventListener(this);
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

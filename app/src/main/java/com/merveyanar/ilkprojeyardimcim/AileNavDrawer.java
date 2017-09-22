@@ -88,31 +88,15 @@ public class AileNavDrawer extends AppCompatActivity
 
             fragment = new MesajlarAileFragment();
 
-        } else if (id == R.id.gecmisilan_aile_aile) {
-
-            fragment = new GecmisIlanAileFragment();
-
         } else if (id == R.id.bakiciara_aile) {
 
             fragment = new BakiciAraAileFragment();
-
-        } else if (id == R.id.kredikazan_aile) {
-
-            fragment = new KrediKazanAileFragment();
-
-        } else if (id == R.id.kredisatinal_aile) {
-
-            fragment = new KrediSatinAlAileFragment();
 
         } else if (id == R.id.sifredegistir_aile) {
 
             fragment = new SifreDegistirAileFragment();
 
-        } else if (id == R.id.iletisim_aile) {
-
-            fragment = new IletisimAileFragment();
-
-        } else if (id == R.id.cikis) {
+        }  else if (id == R.id.cikis) {
 
             fragment = new CikisAileFragment();
 

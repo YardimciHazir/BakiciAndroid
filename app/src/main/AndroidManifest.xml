@@ -61,13 +61,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProfileBakiciActivity">
-            <intent-filter>
-                <action android:name="com.merveyanar.ilkprojeyardimcim.PROFILEBAKICIACTIVITY" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
         <activity android:name=".RegisterBakiciActivity">
             <intent-filter>
                 <action android:name="com.merveyanar.ilkprojeyardimcim.REGISTERBAKICIACTIVITY" />

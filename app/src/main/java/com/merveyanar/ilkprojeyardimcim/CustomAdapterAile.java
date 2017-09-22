@@ -48,11 +48,19 @@ public class CustomAdapterAile extends BaseAdapter {
 
         TextView aileAd= (TextView) satir.findViewById(R.id.aileAd);
         TextView aileSoyad= (TextView) satir.findViewById(R.id.aileSoyad);
-        TextView aileMail= (TextView) satir.findViewById(R.id.aileMail);
+        TextView aileCinsiyet= (TextView) satir.findViewById(R.id.aileCinsiyet);
+        TextView aileEgitimDurumu= (TextView) satir.findViewById(R.id.aileEgitimDurumu);
+        TextView aileMedeniDurum= (TextView) satir.findViewById(R.id.aileMedeniDurum);
+
+
 
         aileAd.setText(mAileList.get(position).getAileAd());
         aileSoyad.setText(mAileList.get(position).getAileSoyad());
-        aileMail.setText(mAileList.get(position).getAileMail());
+        aileCinsiyet.setText(mAileList.get(position).getAileCinsiyet());
+        aileEgitimDurumu.setText(mAileList.get(position).getAileEgitimDurumu());
+        aileMedeniDurum.setText(mAileList.get(position).getAileMedeniDurum());
+
+
 
         return satir;
     }

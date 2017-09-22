@@ -42,24 +42,24 @@ public class CustomAdapterBakiciAra  extends BaseAdapter {
 
         TextView bakiciAd= (TextView) satir.findViewById(R.id.bakiciAd);
         TextView bakiciSoyad= (TextView) satir.findViewById(R.id.bakiciSoyad);
-        TextView bakiciDogumTarihi= (TextView) satir.findViewById(R.id.bakiciDogumTarihi);
-        TextView bakiciAdres= (TextView) satir.findViewById(R.id.bakiciAdres);
-        TextView bakiciEmail= (TextView) satir.findViewById(R.id.bakiciEmail);
-        TextView bakiciMedeniDurumu= (TextView) satir.findViewById(R.id.bakiciMedeniDurumu);
+//        TextView bakiciDogumTarihi= (TextView) satir.findViewById(R.id.bakiciDogumTarihi);
+//        TextView bakiciAdres= (TextView) satir.findViewById(R.id.bakiciAdres);
+//        TextView bakiciEmail= (TextView) satir.findViewById(R.id.bakiciEmail);
+//        TextView bakiciMedeniDurumu= (TextView) satir.findViewById(R.id.bakiciMedeniDurumu);
         TextView bakiciEgitimDurumu= (TextView) satir.findViewById(R.id.bakiciEgitimDurumu);
-        TextView bakiciCinsiyet= (TextView) satir.findViewById(R.id.bakiciCinsiyet);
-        TextView bakiciBakimTercihi= (TextView) satir.findViewById(R.id.bakiciBakimTercihi);
+//        TextView bakiciCinsiyet= (TextView) satir.findViewById(R.id.bakiciCinsiyet);
+//        TextView bakiciBakimTercihi= (TextView) satir.findViewById(R.id.bakiciBakimTercihi);
         TextView bakiciIlSecim= (TextView) satir.findViewById(R.id.bakiciIlSecim);
 
         bakiciAd.setText(mBakiciList.get(position).getAd());
         bakiciSoyad.setText(mBakiciList.get(position).getSoyad());
-        bakiciDogumTarihi.setText(mBakiciList.get(position).getDogumTarihi());
-        bakiciAdres.setText(mBakiciList.get(position).getAdres());
-        bakiciEmail.setText(mBakiciList.get(position).getEmail());
-        bakiciMedeniDurumu.setText(mBakiciList.get(position).getMedeniDurum());
+//        bakiciDogumTarihi.setText(mBakiciList.get(position).getDogumTarihi());
+//        bakiciAdres.setText(mBakiciList.get(position).getAdres());
+//        bakiciEmail.setText(mBakiciList.get(position).getEmail());
+//        bakiciMedeniDurumu.setText(mBakiciList.get(position).getMedeniDurum());
         bakiciEgitimDurumu.setText(mBakiciList.get(position).getEgitimDurumu());
-        bakiciCinsiyet.setText(mBakiciList.get(position).getCinsiyet());
-        bakiciBakimTercihi.setText(mBakiciList.get(position).getBakimTercihi());
+//        bakiciCinsiyet.setText(mBakiciList.get(position).getCinsiyet());
+//        bakiciBakimTercihi.setText(mBakiciList.get(position).getBakimTercihi());
         bakiciIlSecim.setText(mBakiciList.get(position).getIlSecim());
 
         return satir;

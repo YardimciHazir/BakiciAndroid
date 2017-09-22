@@ -73,35 +73,6 @@
 
 
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="37dp"
-        app:srcCompat="@drawable/aaaa"
-        android:layout_below="@+id/imageView"
-        android:layout_alignLeft="@+id/imageView"
-        android:layout_alignStart="@+id/imageView" />
-
-    <LinearLayout
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignBottom="@+id/imageView1"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="10dp"
-        android:layout_toRightOf="@+id/imageView1"
-        android:layout_toEndOf="@+id/imageView1">
-
-        <Button
-            android:id="@+id/iletisimbilgi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="İLETİŞİM BİLGİLERİ" />
-
-    </LinearLayout>
 
 
 
@@ -112,9 +83,9 @@
         android:layout_height="75dp"
         android:layout_marginTop="37dp"
         app:srcCompat="@drawable/aaaa"
-        android:layout_below="@+id/imageView1"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_alignStart="@+id/imageView1" />
+        android:layout_below="@+id/imageView"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView" />
 
     <LinearLayout
         android:gravity="center"

@@ -24,51 +24,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             />
-
-        <TextView
-            android:id="@+id/bakiciDogumTarihi"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            />
-        <TextView
-            android:id="@+id/bakiciAdres"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            />
-        <TextView
-            android:id="@+id/bakiciEmail"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            />
-        <TextView
-            android:id="@+id/bakiciMedeniDurumu"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            />
         <TextView
             android:id="@+id/bakiciEgitimDurumu"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            />
-        <TextView
-            android:id="@+id/bakiciCinsiyet"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            />
-        <TextView
-            android:id="@+id/bakiciBakimTercihi"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"

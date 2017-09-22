@@ -75,7 +75,7 @@ public class ProfilAileFragment extends Fragment {
 
 
         kisiselbilgi_btn = (Button) rootView.findViewById(R.id.kisiselbilgi);
-        iletisimbilgi_btn = (Button) rootView.findViewById(R.id.iletisimbilgi);
+//        iletisimbilgi_btn = (Button) rootView.findViewById(R.id.iletisimbilgi);
         ihtiyacsahibibilgi_btn = (Button) rootView.findViewById(R.id.ihtiyacsahibibilgi);
 
 
@@ -94,15 +94,15 @@ public class ProfilAileFragment extends Fragment {
             }
         });
 
-        iletisimbilgi_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                getFragmentManager().beginTransaction().add(R.id.container, new IletisimBilgiAileFragment(), "IletisimBilgiAileFragment")
-                        .addToBackStack("IletisimBilgiAileFragment").commit();
-
-            }
-        });
+//        iletisimbilgi_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                getFragmentManager().beginTransaction().add(R.id.container, new IletisimBilgiAileFragment(), "IletisimBilgiAileFragment")
+//                        .addToBackStack("IletisimBilgiAileFragment").commit();
+//
+//            }
+//        });
 
         ihtiyacsahibibilgi_btn.setOnClickListener(new View.OnClickListener() {
             @Override

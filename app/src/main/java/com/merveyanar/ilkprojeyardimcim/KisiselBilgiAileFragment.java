@@ -90,7 +90,8 @@ public class KisiselBilgiAileFragment extends Fragment {
 
                 aileList.clear();
                 AileModel aileModel = dataSnapshot.getValue(AileModel.class);
-                aileList.add(new AileModel(aileModel.getAileAd(), aileModel.getAileSoyad(), aileModel.getAileMail()));
+                aileList.add(new AileModel(aileModel.getAileAd(), aileModel.getAileSoyad(), aileModel.getAileCinsiyet(),
+                        aileModel.getAileEgitimDurumu(),aileModel.getAileMedeniDurum()));
 
                 CustomAdapterAile adapter = new CustomAdapterAile(getActivity(), aileList);
                 listView.setAdapter(adapter);

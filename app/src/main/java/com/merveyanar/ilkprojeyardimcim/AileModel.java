@@ -4,7 +4,7 @@ package com.merveyanar.ilkprojeyardimcim;
  * Created by 7 on 05.08.2017.
  */
 
-public class AileModel   {
+public class AileModel {
 
 
     public String getAileAd() {
@@ -166,14 +166,17 @@ public class AileModel   {
         this.hastaFotograf = hastaFotograf;
     }
 
-    public AileModel(String aileAd, String aileSoyad, String aileMail) {
-        this.aileAd=aileAd;
-        this.aileSoyad=aileSoyad;
-        this.aileMail=aileMail;
+    public AileModel(String aileAd, String aileSoyad, String aileCinsiyet, String aileEgitimDurumu, String aileMedeniDurum) {
+        this.aileAd = aileAd;
+        this.aileSoyad = aileSoyad;
+        this.aileCinsiyet = aileCinsiyet;
+        this.aileEgitimDurumu = aileEgitimDurumu;
+        this.aileMedeniDurum = aileMedeniDurum;
     }
 
-    private String aileAd;
 
+
+    private String aileAd;
     private String aileSoyad;
     private String aileAdres;
     private String aileMail;

@@ -10,7 +10,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Ayarlar</string>
 
     <string name="gender_prompt">-Seçiniz-</string>
     <string-array name="gender_arrays">
@@ -134,5 +134,5 @@
         <item>Yaşlı</item>
         <item>Çocuk</item>
     </string-array>
-    <string name="title_activity_aile_nav_drawer">AileNavDrawer</string>
+    <string name="title_activity_aile_nav_drawer">Yardımcım Hazır</string>
 </resources>
